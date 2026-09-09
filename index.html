@@ -1,9 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+
 <head>
-    <title>Test</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rizal Jihadudin — Portfolio</title>
+  <meta name="description" content="Kumpulan portofolio proyek web, dashboard, dan produk digital." />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <h1>Welcome test</h1>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">RZ</span>
+        <span class="brand-text" id="brand-name">Portfolio</span>
+      </a>
+      <nav class="header-nav">
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow" id="hero-eyebrow"></p>
+        <h1 class="hero-title" id="hero-title"></h1>
+        <p class="hero-tagline" id="hero-tagline"></p>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title">ALL PROJECTS</h2>
+          <p class="section-meta">Showing <span id="shown-count">0</span> of <span id="total-count">0</span> projects</p>
+        </div>
+
+        <div class="grid" id="project-grid" role="list"></div>
+
+        <div class="loader" id="loader" hidden>
+          <span class="loader-box"></span>
+          <span class="loader-box"></span>
+          <span class="loader-box"></span>
+          <p class="loader-text">Memuat proyek berikutnya...</p>
+        </div>
+
+        <div class="load-more-wrap">
+          <button class="btn btn-accent" id="load-more" type="button">Muat Lebih Banyak</button>
+          <p class="end-note" id="end-note" hidden>Semua proyek sudah tampil.</p>
+        </div>
+
+        <div id="scroll-sentinel" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="contact-text">Open to new opportunities and collaborations.</p>
+        <ul class="social-list" id="social-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p id="footer-name"></p>
+      <p>Crafted with ❤️ </p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Tutup detail proyek">&times;</button>
+      <div class="modal-scroll" id="modal-scroll"></div>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox-backdrop" data-close-lightbox></div>
+    <button class="lightbox-close" type="button" data-close-lightbox
+      aria-label="Tutup pratinjau gambar">&times;</button>
+    <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-step="-1"
+      aria-label="Gambar sebelumnya">&#8592;</button>
+    <button class="lightbox-nav lightbox-next" type="button" data-lightbox-step="1"
+      aria-label="Gambar berikutnya">&#8594;</button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      <figcaption class="lightbox-caption" id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
+  <script src="constants.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
