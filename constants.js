@@ -111,7 +111,7 @@ const PROJECTS = [
         description: [
             "FVS adalah sistem yang dirancang untuk melakukan monitoring history perjalanan kendaraan secara efisien dan akurat.",
         ],
-        stack: ["React JS", "shadcn/ui", "tailwindcss", "axios", "JavaScript"],
+        stack: ["React JS", "shadcn/ui", "tailwindcss", "axios", "JavaScript", "GMaps API"],
         url: "-",
         ...media("fvs")
     },
